@@ -1,0 +1,110 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffed9c; /* Fundo amarelo claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffc107; /* Amarelo vibrante */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #333; /* Texto escuro para contraste */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #fff; /* Texto branco ao passar o mouse */
+}
+
+/* Container principal */
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Título */
+h1 {
+    color: #000000; /* Amarelo vibrante */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Detalhes do pedido */
+#pedido-detalhes {
+    margin-top: 1.5rem;
+}
+
+#pedido-detalhes p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#pedido-detalhes ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#pedido-detalhes ul li {
+    background-color: #fff3cd; /* Amarelo claro para os itens da lista */
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 2rem auto 0;
+    text-align: center;
+    background-color: #ffc107; /* Amarelo vibrante */
+    border: none;
+    color: #333; /* Texto escuro para contraste */
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #e0a800; /* Amarelo mais escuro ao passar o mouse */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #666;
+}

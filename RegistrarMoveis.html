@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="./CSS/RegistrarMoveis.css">
+</head>
+<body>
+    <h1 class="Titulo">Registrar Novo</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html">Fazer Pedido</a></li>
+            <li><a href="./listaPedidos.html">Lista de Pedidos</a></li>
+            <li><a href="./Estoque.html">Estoque</a></li>
+            <li><a href="./RegistrarMoveis.html">Registrar Móveis</a></li>
+            <li><a href="https://app.powerbi.com/view?r=eyJrIjoiZDcyNzQ1NWYtMzFjMi00MjMxLTlkZDEtZDQwYTQ5NWRhYjYzIiwidCI6ImIyZDMwOWMxLThhMDEtNGFlZi1hYjM4LWE2ZmRmMWNlMmFmYSJ9">DashBoard</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <form id="registrarForm" onsubmit="event.preventDefault(); Post();">
+            <h1>Registrar Novo Produto</h1>
+            <label for="Nome">Nome</label>
+            <input type="text" name="Nome" id="Nome">
+            
+            <label for="Quantidade">Quantidade</label>
+            <input type="text" name="Quantidade" id="Quantidade">
+            
+            <label for="Categoria">Categoria</label>
+            <select name="Categoria" id="Categoria">
+                <option value="APARADOR">APARADOR</option>
+                <option value="ARMÁRIOS">ARMÁRIOS</option>
+                <option value="BALCÃO">BALCÃO</option>
+                <option value="BANCADA E BANQUETAS">BANCADA E BANQUETAS</option>
+                <option value="BIOMBO">BIOMBO</option>
+                <option value="CADEIRAS">CADEIRAS</option>
+                <option value="COFRES E CVI'S">COFRES E CVI'S</option>
+                <option value="DIVISÓRIA">DIVISÓRIA</option>
+                <option value="ESTANTE">ESTANTE</option>
+                <option value="FORRO">FORRO</option>
+                <option value="FRAGMENTADORA">FRAGMENTADORA</option>
+                <option value="FRIGOBAR">FRIGOBAR</option>
+                <option value="GAVETEIRO">GAVETEIRO</option>
+                <option value="GUICHÊ">GUICHÊ</option>
+                <option value="LIXEIRA">LIXEIRA</option>
+                <option value="LOCKER">LOCKER</option>
+                <option value="LONGARINA">LONGARINA</option>
+                <option value="LUMINÁRIA">LUMINÁRIA</option>
+                <option value="LUSTRE">LUSTRE</option>
+                <option value="MESA">MESA</option>
+                <option value="MICROONDAS">MICROONDAS</option>
+                <option value="MOLDURAS">MOLDURAS</option>
+                <option value="POLTRONAS">POLTRONAS</option>
+                <option value="PUFFS">PUFFS</option>
+                <option value="RACKS E QUADROS">RACKS E QUADROS</option>
+                <option value="SOFÁS">SOFÁS</option>
+                <option value="TAPETES">TAPETES</option>
+                <option value="TVS">TVS</option>
+            </select>
+            <label for="Imagem">Imagem</label>
+            <input type="file" name="imagem" id="imagem" >
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
+        Developed by Lucas Motta Teixeira
+    </footer>
+
+    <script src="./JS/registrarMoveis.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/listaPedidos.css">
+    <title>Lista de Pedidos</title>
+    <style>
+        /* Estilo personalizado para os botões */
+        .btn-details {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn-details:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="">
+        <h1>Lista de Pedidos</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html">Fazer Pedido</a></li>
+            <li><a href="./listaPedidos.html">Lista de Pedidos</a></li>
+            <li><a href="./Estoque.html">Estoque</a></li>
+            <li><a href="./RegistrarMoveis.html">Registrar Móveis</a></li>
+            <li><a href="https://app.powerbi.com/view?r=eyJrIjoiZDcyNzQ1NWYtMzFjMi00MjMxLTlkZDEtZDQwYTQ5NWRhYjYzIiwidCI6ImIyZDMwOWMxLThhMDEtNGFlZi1hYjM4LWE2ZmRmMWNlMmFmYSJ9">DashBoard</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="container my-5">
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Data</th>
+                        <th>Agencia</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="pedidos-body">
+                    <tr>
+                        <td ></td>
+                        <td ></td>
+                        <td>
+                            <a href="#" class="btn-details">Ver detalhes</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
+        Developed by Lucas Motta Teixeira
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="./JS/listaPedidos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

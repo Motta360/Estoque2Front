@@ -1,0 +1,306 @@
+/* Estilo geral */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #ffed9c;
+    color: #333;
+}
+
+/* Título */
+.Titulo {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #ffc107; /* Amarelo vibrante */
+    margin: 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    background-color: #ffc107; /* Amarelo vibrante */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul li {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #fff3cd; /* Amarelo claro */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li:hover {
+    background-color: #e0a800; /* Amarelo mais escuro */
+    color: white;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Container principal */
+article {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+aside {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff3cd; /* Amarelo claro */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #ffc107; /* Amarelo vibrante */
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.itens-container {
+    width: 75%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de itens */
+#itens {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#itens ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#itens ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff3cd; /* Amarelo claro */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#itens ul li:hover {
+    background-color: #ffe69c; /* Amarelo mais claro */
+}
+
+.item {
+    font-family: Arial, Helvetica, sans-serif;
+    flex-grow: 1;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.input-text {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100px;
+    margin-left: 10px;
+    display: none;
+}
+
+.checkbox:checked ~ .input-text {
+    display: inline-block;
+}
+
+/* Campo de Agência */
+#Agencia {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Botão Pedir */
+#btnPedir {
+    padding: 10px 20px;
+    background-color: #ffc107; /* Amarelo vibrante */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btnPedir:hover {
+    background-color: #e0a800; /* Amarelo mais escuro */
+}
+
+/* Estilo para o aside (categorias) */
+aside {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff3cd; /* Amarelo claro */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+aside h2 {
+    margin-top: 0;
+    color: #ffc107; /* Amarelo vibrante */
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+aside ul li a:hover {
+    background-color: #ffc107; /* Amarelo vibrante */
+    color: white;
+    transform: translateX(10px);
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* Estilo do Modal */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 1000; /* Fica acima de tudo */
+    padding-top: 60px; /* Espaçamento do topo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgb(0,0,0); /* Cor de fundo */
+    background-color: rgba(0,0,0,0.9); /* Cor de fundo com transparência */
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Botão de fechar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo da imagem com animação ao passar o mouse */
+.imagem-movel {
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Efeito de escala ao passar o mouse */
+.imagem-movel:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
+}
+
+/* Estilo da tela de carregamento */
+.loading-screen {
+    display: none; /* Oculta a tela de carregamento por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    z-index: 1000; /* Garante que fique acima de tudo */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.5em;
+}
+
+/* Estilo do spinner de carregamento */
+.loading-spinner {
+    border: 5px solid #f3f3f3; /* Cor do spinner */
+    border-top: 5px solid #3498db; /* Cor da animação */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Animação de rotação */
+}
+
+/* Animação do spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Pedido</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+</head>
+
+<body>
+    <div class="root1">
+        <div class="Titulo">
+            <h1>Estoque</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="./indexC.html">Fazer Pedido</a></li>
+                <li><a href="./EstoqueC.html">Estoque</a></li>
+                <li><a
+                        href="https://app.powerbi.com/view?r=eyJrIjoiZDcyNzQ1NWYtMzFjMi00MjMxLTlkZDEtZDQwYTQ5NWRhYjYzIiwidCI6ImIyZDMwOWMxLThhMDEtNGFlZi1hYjM4LWE2ZmRmMWNlMmFmYSJ9">DashBoard</a>
+                </li>
+
+            </ul>
+        </nav>
+        <article>
+            <aside>
+                <h2>Categorias</h2>
+                <ul>
+                    <li><a href="#aparador">APARADOR</a></li>
+                    <li><a href="#armarios">ARMÁRIOS</a></li>
+                    <li><a href="#balcao">BALCÃO</a></li>
+                    <li><a href="#bancada">BANCADA E BANQUETAS</a></li>
+                    <li><a href="#biombo">BIOMBO</a></li>
+                    <li><a href="#cadeiras">CADEIRAS</a></li>
+                    <li><a href="#cofres">COFRES E CVI'S</a></li>
+                    <li><a href="#divisoria">DIVISÓRIA</a></li>
+                    <li><a href="#estante">ESTANTE</a></li>
+                    <li><a href="#forro">FORRO</a></li>
+                    <li><a href="#fragmentadora">FRAGMENTADORA</a></li>
+                    <li><a href="#frigobar">FRIGOBAR</a></li>
+                    <li><a href="#gaveteiro">GAVETEIRO</a></li>
+                    <li><a href="#guiche">GUICHÊ</a></li>
+                    <li><a href="#lixeira">LIXEIRA</a></li>
+                    <li><a href="#locker">LOCKER</a></li>
+                    <li><a href="#longarina">LONGARINA</a></li>
+                    <li><a href="#luminaria">LUMINÁRIA</a></li>
+                    <li><a href="#lustre">LUSTRE</a></li>
+                    <li><a href="#mesa">MESA</a></li>
+                    <li><a href="#microondas">MICROONDAS</a></li>
+                    <li><a href="#molduras">MOLDURAS</a></li>
+                    <li><a href="#poltronas">POLTRONAS</a></li>
+                    <li><a href="#puffs">PUFFS</a></li>
+                    <li><a href="#racksequadros">RACKS E QUADROS</a></li>
+                    <li><a href="#sofas">SOFÁS</a></li>
+                    <li><a href="#tapetes">TAPETES</a></li>
+                    <li><a href="#tvs">TVS</a></li>
+                </ul>
+            </aside>
+            <div class="itens-container">
+                <section id="itens">
+                    <input type="text" name="Agencia" id="Agencia" placeholder="Unidade (uniorg + nome agência)">
+                    <input type="text" name="GestorSTD" id="GestorSTD" placeholder="Gestor Santander">
+                    <input type="text" name="GestorR" id="GestorR" placeholder="Gerenciadora Responsavel">
+                    <input type="text" name="Fornecedor" id="Fornecedor"
+                        placeholder="Fornecedor que acessará o estoque">
+                    <input type="date" name="DataPrevista" id="DataPrevista"
+                        placeholder="Data Prevista de Acesso ao Estoque">
+                    <input type="email" name="email" id="email" placeholder="Insira seu e-mail para contato">
+                    <select name="I/O" id="I/O">
+                        <option value="Saida">SAIDA</option>
+                        <option value="Entrada">ENTRADA</option>
+                    </select>
+                    <ul id="lista-itens"></ul>
+                    <button type="button" id="btnPedir">Pedir</button>
+                </section>
+            </div>
+        </article>
+
+        <div id="loadingScreen" class="loading-screen">
+            <div class="loading-spinner"></div>
+            <p>Enviando pedido...</p>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
+        Developed by Lucas Motta Teixeira
+    </footer>
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>
