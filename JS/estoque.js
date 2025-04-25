@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = 'https://foxen5163.c34.integrator.host/estoqueAPI';
 GET()
     // Função para preencher a tabela com os dados da API
     function preencherTabela(dados) {

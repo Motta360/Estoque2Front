@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = 'https://foxen5163.c34.integrator.host/estoqueAPI';
 function AdicionarLista(dados) {
     const ul = document.getElementById("lista-itens");
     ul.innerHTML = ""; // Limpa a lista antes de adicionar novos itens

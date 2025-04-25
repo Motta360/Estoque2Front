@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/listaPedidos.css">
     <title>Lista de Pedidos</title>
     <style>
@@ -19,26 +21,40 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
+
         .btn-details:hover {
             background-color: #0b5ed7;
         }
     </style>
 </head>
-<body>
 
-    <!-- Cabeçalho -->
-    <header class="">
-        <h1>Lista de Pedidos</h1>
-    </header>
+<body>
+    <!-- Cabeçalho com logos -->
+    <div class="header-container">
+        <!-- Logo no canto esquerdo -->
+        <img src="./Img/64661d328945f927e2c224f5_AF-[LOGO] FOX ENGENHARIA 1997 FINAL-01.png" alt="Logo Esquerda"
+            class="left-logo">
+
+        <!-- Logo no canto direito -->
+        <img src="./Img/toolsdigitalservices_logo.jpg" alt="Logo Direita" class="right-logo">
+
+        <!-- Título centralizado -->
+        <div class="title-container">
+            <h1 class="Titulo"><img src="./Img/5a27cdfd52b1cc0d022e6d5c.png" alt=""></h1>
+        </div>
+    </div>
+
 
     <nav class="navbar">
         <ul>
-            <li><a href="./index.html">Fazer Pedido</a></li>
+            <li><a href="./indexC.html">Fazer Pedido</a></li>
             <li><a href="./listaPedidos.html">Lista de Pedidos</a></li>
             <li><a href="./Estoque.html">Estoque</a></li>
             <li><a href="./RegistrarMoveis.html">Registrar Móveis</a></li>
-            <li><a href="https://app.powerbi.com/view?r=eyJrIjoiZDcyNzQ1NWYtMzFjMi00MjMxLTlkZDEtZDQwYTQ5NWRhYjYzIiwidCI6ImIyZDMwOWMxLThhMDEtNGFlZi1hYjM4LWE2ZmRmMWNlMmFmYSJ9">DashBoard</a></li>
-            
+            <li><a
+                    href="https://app.powerbi.com/view?r=eyJrIjoiZDcyNzQ1NWYtMzFjMi00MjMxLTlkZDEtZDQwYTQ5NWRhYjYzIiwidCI6ImIyZDMwOWMxLThhMDEtNGFlZi1hYjM4LWE2ZmRmMWNlMmFmYSJ9">DashBoard</a>
+            </li>
+
         </ul>
     </nav>
 
@@ -55,8 +71,8 @@
                 </thead>
                 <tbody id="pedidos-body">
                     <tr>
-                        <td ></td>
-                        <td ></td>
+                        <td></td>
+                        <td></td>
                         <td>
                             <a href="#" class="btn-details">Ver detalhes</a>
                         </td>
@@ -73,6 +89,9 @@
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="./JS/listaPedidos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

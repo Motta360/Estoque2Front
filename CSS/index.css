@@ -304,3 +304,59 @@ aside ul li a:hover {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Imagem 28/03*/
+/* Estilos para o cabeçalho */
+/* Estilos para o cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    position: relative;
+    height: 120px; /* Altura fixa para o cabeçalho */
+}
+
+/* Imagem no canto esquerdo */
+.left-logo {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Imagem no canto direito */
+.right-logo {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Container do título */
+.title-container {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Ajuste para o título */
+.Titulo {
+    margin: 0;
+    padding-top: 10px;
+}
+.Titulo img{
+    max-width: 70px;
+    max-height: 100px;
+}

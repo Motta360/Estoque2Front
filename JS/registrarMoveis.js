@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = 'https://foxen5163.c34.integrator.host/estoqueAPI';
 async function Post() {
     const nome = document.getElementById('Nome').value;
     const quantidade = document.getElementById('Quantidade').value;

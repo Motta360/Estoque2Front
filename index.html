@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fazer Pedido</title>
     <link rel="stylesheet" href="./CSS/index.css">
 </head>
+
 <body>
-    <div class="root1">    
-        <div class="Titulo">
-            <h1>Estoque</h1>
+    <!-- Cabeçalho com logos -->
+    <div class="header-container">
+        <!-- Logo no canto esquerdo -->
+        <img src="./Img/64661d328945f927e2c224f5_AF-[LOGO] FOX ENGENHARIA 1997 FINAL-01.png" alt="Logo Esquerda"
+            class="left-logo">
+
+        <!-- Logo no canto direito -->
+        <img src="./Img/toolsdigitalservices_logo.jpg" alt="Logo Direita" class="right-logo">
+
+        <!-- Título centralizado -->
+        <div class="title-container">
+            <h1 class="Titulo"><img src="./Img/5a27cdfd52b1cc0d022e6d5c.png" alt=""></h1>
         </div>
+    </div>
+
+    <div class="root1">
         <nav class="navbar">
             <ul>
                 <li><a href="./index.html">Fazer Pedido</a></li>
-                <li><a href="./listaPedidos.html">Lista de Pedidos</a></li>
-                <li><a href="./Estoque.html">Estoque</a></li>
-                <li><a href="./RegistrarMoveis.html">Registrar Móveis</a></li>
-                <li><a href="https://app.powerbi.com/view?r=eyJrIjoiZDcyNzQ1NWYtMzFjMi00MjMxLTlkZDEtZDQwYTQ5NWRhYjYzIiwidCI6ImIyZDMwOWMxLThhMDEtNGFlZi1hYjM4LWE2ZmRmMWNlMmFmYSJ9">DashBoard</a></li>
+                <li><a href="./EstoqueC.html">Estoque</a></li>
+                <li><a
+                        href="https://app.powerbi.com/view?r=eyJrIjoiZDcyNzQ1NWYtMzFjMi00MjMxLTlkZDEtZDQwYTQ5NWRhYjYzIiwidCI6ImIyZDMwOWMxLThhMDEtNGFlZi1hYjM4LWE2ZmRmMWNlMmFmYSJ9">DashBoard</a>
+                </li>
+
             </ul>
         </nav>
         <article>
@@ -59,8 +74,10 @@
                     <input type="text" name="Agencia" id="Agencia" placeholder="Unidade (uniorg + nome agência)">
                     <input type="text" name="GestorSTD" id="GestorSTD" placeholder="Gestor Santander">
                     <input type="text" name="GestorR" id="GestorR" placeholder="Gerenciadora Responsavel">
-                    <input type="text" name="Fornecedor" id="Fornecedor" placeholder="Fornecedor que acessará o estoque">
-                    <input type="date" name="DataPrevista" id="DataPrevista" placeholder="Data Prevista de Acesso ao Estoque">
+                    <input type="text" name="Fornecedor" id="Fornecedor"
+                        placeholder="Fornecedor que acessará o estoque">
+                    <input type="date" name="DataPrevista" id="DataPrevista"
+                        placeholder="Data Prevista de Acesso ao Estoque">
                     <input type="email" name="email" id="email" placeholder="Insira seu e-mail para contato">
                     <select name="I/O" id="I/O">
                         <option value="Saida">SAIDA</option>
@@ -72,22 +89,22 @@
             </div>
         </article>
 
-
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-        </div>
         <div id="loadingScreen" class="loading-screen">
             <div class="loading-spinner"></div>
             <p>Enviando pedido...</p>
         </div>
-        
     </div>
+        <!-- Modal para visualização de imagens -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+    
 
     <footer style="text-align: center; padding: 10px; font-size: 12px; color: #666;">
         Developed by Lucas Motta Teixeira
     </footer>
-
     <script src="./JS/index.js"></script>
 </body>
+
 </html>

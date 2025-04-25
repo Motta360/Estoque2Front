@@ -1,15 +1,14 @@
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = 'https://foxen5163.c34.integrator.host/estoqueAPI';
 
 function carregarDetalhesPedido() {
     const urlParams = new URLSearchParams(window.location.search);
-    const pedidoId = urlParams.get('id'); // Obtém o ID do pedido da URL
+    const pedidoId = urlParams.get('id');
 
     if (!pedidoId) {
         alert('ID do pedido não encontrado na URL.');
         return;
     }
 
-    // Faz a requisição para a API
     fetch(`${API_BASE_URL}/pedidos/${pedidoId}`)
         .then(response => {
             if (!response.ok) {
@@ -18,7 +17,6 @@ function carregarDetalhesPedido() {
             return response.json();
         })
         .then(pedido => {
-            // Exibe os detalhes do pedido na página
             document.getElementById('pedido-id').textContent = `Detalhes do Pedido #${pedido.id}`;
             const detalhesDiv = document.getElementById('pedido-detalhes');
 
@@ -47,10 +45,8 @@ function carregarDetalhesPedido() {
             const entrada = document.createElement('p');
             entrada.textContent = `Movimento: ${pedido.entrada}`;
 
-            // Parseia a string JSON dos itens
+            // Parseia os itens
             const itens = JSON.parse(pedido.pedido);
-
-            // Cria uma lista para exibir os itens
             const listaItens = document.createElement('ul');
             itens.forEach(item => {
                 const itemLi = document.createElement('li');
@@ -58,7 +54,7 @@ function carregarDetalhesPedido() {
                 listaItens.appendChild(itemLi);
             });
 
-            // Adiciona os detalhes à página
+            // Adiciona os elementos à página
             detalhesDiv.appendChild(data);
             detalhesDiv.appendChild(agencia);
             detalhesDiv.appendChild(gestorSTD);
@@ -71,19 +67,16 @@ function carregarDetalhesPedido() {
 
             // Verifica se o pedido já foi executado
             if (pedido.executado) {
-                // Desabilita o botão "Executar Pedido"
                 const botaoExecutar = document.getElementById('executarPedido');
                 botaoExecutar.disabled = true;
                 botaoExecutar.textContent = 'Pedido Executado';
 
-                // Exibe uma mensagem informando que o pedido já foi executado
                 const mensagem = document.createElement('p');
                 mensagem.textContent = 'Este pedido já foi executado.';
                 mensagem.style.color = 'green';
                 mensagem.style.fontWeight = 'bold';
                 detalhesDiv.appendChild(mensagem);
             } else {
-                // Adiciona o evento de clique ao botão "Executar Pedido"
                 document.getElementById('executarPedido').addEventListener('click', () => {
                     executarPedido(pedidoId, itens);
                 });
@@ -95,9 +88,9 @@ function carregarDetalhesPedido() {
         });
 }
 
-// Função para executar o pedido
 function executarPedido(pedidoId, itens) {
-    console.log('Corpo da requisição:', JSON.stringify(itens));
+    console.log('Enviando para:', `${API_BASE_URL}/pedidos/${pedidoId}/executar`);
+    console.log('Dados:', JSON.stringify(itens));
 
     fetch(`${API_BASE_URL}/pedidos/${pedidoId}/executar`, {
         method: 'POST',
@@ -115,47 +108,13 @@ function executarPedido(pedidoId, itens) {
         return response.json();
     })
     .then(data => {
-        alert(data.message); // Exibe a mensagem de sucesso
-        console.log('Resposta da API:', data);
-        // Recarrega a página para atualizar o status do pedido
+        alert(data.message);
         window.location.reload();
     })
     .catch(error => {
         console.error('Erro:', error);
-        alert(error.message); // Exibe a mensagem de erro
+        alert('Erro ao executar pedido: ' + error.message);
     });
 }
 
-// Função para executar o pedido
-function executarPedido(pedidoId, itens) {
-    console.log('Corpo da requisição:', JSON.stringify(itens));
-
-    fetch(`http://localhost:8080/pedidos/${pedidoId}/executar`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(itens)
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.json().then(errorData => {
-                throw new Error(errorData.error || 'Erro ao executar pedido');
-            });
-        }
-        return response.json();
-    })
-    .then(data => {
-        alert(data.message); // Exibe a mensagem de sucesso
-        console.log('Resposta da API:', data);
-        // Recarrega a página para atualizar o status do pedido
-        window.location.reload();
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        alert(error.message); // Exibe a mensagem de erro
-    });
-}
-
-// Chama a função ao carregar a página
 document.addEventListener('DOMContentLoaded', carregarDetalhesPedido);
